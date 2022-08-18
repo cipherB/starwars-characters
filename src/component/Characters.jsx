@@ -72,7 +72,7 @@ const Characters = ({characterList}) => {
   // get the sum of height of all visible characters in cm, ft, in
   const sumOfHeights = () => {
     let sum = 0;
-    characters.map(item => sum += parseInt(item.height))
+    characters.map(item => item.height === "unknown" ? sum +=  0 : sum += parseInt(item.height))
     let feet = (parseInt(sum / 30.48))
     let inch = parseFloat((sum / 2.54) - (feet * 12)).toFixed(2)
     return `${sum} cm (${feet}ft/${inch}in)`
