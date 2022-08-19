@@ -117,10 +117,10 @@ const Characters = ({characterList}) => {
               <p className='table-header' >Name</p>
             </th>
             <th align='left' onDoubleClick={()=>setSort('gender')} >
-              <p className='table-header' >Gender</p>
+              <p >Gender</p>
             </th>
             <th align='left' onDoubleClick={()=>setSort('height')} >
-              <p className='table-header' >Height</p>
+              <p >Height</p>
             </th>
           </tr>
         </thead>
@@ -132,22 +132,22 @@ const Characters = ({characterList}) => {
                   <p className='table-data'>{item.name}</p>
                 </td>
                 <td align='left' >
-                  <p className='table-data' >{getInitialLetter(item.gender)}</p> 
+                  <p >{getInitialLetter(item.gender)}</p> 
                 </td>
                 <td align='left' >
-                  <p className='table-data' >{item.height}</p> 
+                  <p >{item.height}</p> 
                 </td>
               </tr>
             )) 
           }
           <tr className='table-header-row'>
             <th className='table-header'>Total characters</th>
-            <th className='table-header'>Total height</th>
+            <th>Total height</th>
             <th></th>
           </tr>
           <tr className="table-row">
             <td className='table-data'>{characters.length}</td>
-            <td className='table-data'>{sumOfHeights()}</td>
+            <td>{sumOfHeights()}</td>
             <td></td>
           </tr>
         </tbody>
